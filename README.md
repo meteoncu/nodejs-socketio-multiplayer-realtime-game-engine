@@ -8,12 +8,11 @@ npm (usually comes with Node.js)
 
 ### Installation
 Clone the repository:
-
-git clone https://github.com/meteoncu/nodejs-socketio-multiplayer-realtime-game-engine.git
-cd nodejs-socketio-multiplayer-realtime-game-engine
+- git clone https://github.com/meteoncu/nodejs-socketio-multiplayer-realtime-game-engine.git
+- cd nodejs-socketio-multiplayer-realtime-game-engine
 
 Install the required dependencies:
-npm install
+- npm install
 
 ### Start the game server:
 node server.js
