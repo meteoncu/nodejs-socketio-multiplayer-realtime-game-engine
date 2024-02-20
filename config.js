@@ -1,0 +1,39 @@
+function random(min, max){
+	return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+module.exports = {
+  random: random,
+  PORT: process.env.PORT || 3000,
+  FPS: 10,
+  RANKING_DELAY: 3000,
+
+  TRAP_INTERVAL: 50,
+  TRAP_WIDTH: 30,
+  TRAP_HEIGHT:30,
+
+  FEED_INTERVAL: 50,
+  FEED_WIDTH: 10,
+  FEED_HEIGHT:10,
+
+  WIDTH: 1000,
+  HEIGHT: 1000,
+
+  MAX_HEALTH: 100,
+  MAX_ENERGY: 100,
+  DEFAULT_HEALTH: 70,
+  DEFAULT_ENERGY: 40,
+  DEFAULT_SPEED: 10,
+
+  ATTACK_ENERGY_CONSUMPTION: 30,
+  ATTACK_RANGE: 50,
+  ATTACK_DAMAGE: 33,
+
+  TELEPORT_ENERGY_CONSUMPTION: 40,
+  TELEPORT_SPEED: 40,
+
+  GAME_DURATION: 5 * 60,
+  ENDING_DURATION: 10,
+  DEATH_WAITING_DURATION: 3,
+  FEED_DURATION: 7
+};

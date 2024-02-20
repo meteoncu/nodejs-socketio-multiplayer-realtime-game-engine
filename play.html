@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <title>ELEMENTRIX - Fight through Elements</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link type="text/css" rel="stylesheet" href='main.css'>
+    
+        <script src="jquery.js"></script>
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    
+        <script src="graphics.js"></script>
+        <script src="client.js"></script>
+    
+        <script src="new_angle.js"></script>
+        <script src="animate_scroll.js"></script>
+        <script src="animate_player.js"></script>
+
+    </head>
+    
+    <body>
+    
+        <canvas id="gameCanvas"></canvas>
+
+
+        <div id="game"></div>
+
+        <div id="features">
+        <div style='padding-left:5px;'><a href="javascript:logout();" style="text-decoration:none;color:#000;font-size:10px;">Exit the game</a> - <a href="rankings.php" style="text-decoration:none;color:#000;font-size:10px;">Rankings</a> - <a href="profil.php" style="text-decoration:none;color:#000;font-size:10px;">Profil</a></div>
+        <div style='width:200px;border:1px rgb(255,50,50) solid;border-radius:15px;overflow:hidden;margin-top:5px;'><div style='background-color:rgb(255,50,50);width:50px;font-size:11px;line-height:24px;float:left;text-align:center;'>Health</div><div style='width:150px;float:left;'><div id='health_percentage' style='background-color:rgb(255,150,0);line-height:24px;height:10px;height:100%;'>&nbsp;</div></div><div style='clear:both;'></div></div>
+        <div style='width:200px;border:1px rgb(0,140,255) solid;border-radius:15px;overflow:hidden;margin-top:5px;'><div style='background-color:rgb(0,140,255);width:50px;font-size:11px;line-height:24px;float:left;text-align:center;'>Energy</div><div style='width:150px;float:left;'><div id='energy_percentage' style='background-color:rgb(0,200,255);line-height:24px;height:10px;height:100%;'>&nbsp;</div></div><div style='clear:both;'></div></div>
+        <div style='font-size:12px;margin-top:5px;margin-left:5px;'><b>SPACE</b> to attack<br><b>TAB</b> for score board<br><b>F</b> for flash movement<br><b>S</b> to make enemy slow<br><b>Q</b> for zoomout<br><a id='countdown'>#:#</a></div>
+        </div>
+
+        <div id="console_bg"></div>
+        <div id="console">
+        <div style='padding:10px;color:#fff;'>
+        <div style='font-size:14px;margin-top:5px;'><img src='./graphics/kills.png' style='float:left;'><div style='float:left;margin-left:5px;margin-top:3px;'>Kills: <a id='kills_number'>0</a></div> <img src='./graphics/deaths.png' style='float:left;margin-left:15px;'><div style='float:left;margin-left:5px;margin-top:3px;'>Deaths: <a id='deaths_number'>0</a></div><div style='clear:both;'></div></div>
+        </div>
+
+        <div id="console_logs" style="margin-top:10px;padding-left:10px;color:#fff;height:100%;overflow:hidden;">
+        <!--
+        <?php
+        $console=mysqli_query($db,"SELECT * FROM kills WHERE killerno='".$player['no']."' or killedno='".$player['no']."' order by time DESC");
+        while($v=mysqli_fetch_assoc($console)){
+        if($v['killerno']==$player['no']){
+        $killed=mysqli_fetch_assoc(mysqli_query($db,"SELECT nickname FROM players WHERE no='".$v['killedno']."'"));
+        echo "<div style='margin-bottom:5px;'>".$player['nickname']." <img src='/graphics/kills.png' style='width:14px;height:14px;'> ".$killed['nickname']."</div>";
+        }else{
+        $killer=mysqli_fetch_assoc(mysqli_query($db,"SELECT nickname FROM players WHERE no='".$v['killerno']."'"));
+        echo "<div style='margin-bottom:5px;'>".$killer['nickname']." <img src='/graphics/kills.png' style='width:14px;height:14px;'> <a style='color:rgb(0,255,100);'>".$player['nickname']."</a></div>";
+        }//if log belongs to death
+        }//console loop
+        ?>
+        -->
+        </div>
+
+        </div>
+
+        <div id="ajaxdiv"></div>
+
+    </body>
+</html>
